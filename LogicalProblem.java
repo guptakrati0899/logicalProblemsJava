@@ -77,6 +77,21 @@ public class LogicalProblem {
 	
 	
 	
+	   
+		public static void toBinary(int decimal){    
+		     int binary[] = new int[40];    
+		     int index = 0;    
+		     while(decimal > 0){    
+		       binary[index++] = decimal%2;    
+		       decimal = decimal/2;    
+		     }    
+		     for(int i = index-1;i >= 0;i--){    
+		       System.out.print(binary[i]);    
+		     }    
+		System.out.println(); 
+		}    
+	
+	
 	
 	
 	
@@ -97,7 +112,8 @@ public class LogicalProblem {
 	System.out.println("Coupon Code: "+couponCode);	
 	}
 	
-  
+	
+	    
 	 
 
 	public static void main(String[] args) {
@@ -107,15 +123,19 @@ public class LogicalProblem {
 		 //Square root using newton's method
 		
 		
-		   double a = Double.parseDouble(args[0]);
+		 double a = Double.parseDouble(args[0]);
 
-		   double epsilon = 1e-15;
-		   double t = a;
+		 double epsilon = 1e-15;
+		 double t = a;
 
-		  while (Math.abs(t - a/t) > epsilon * t) {
+		 while (Math.abs(t - a/t) > epsilon * t) {
 		          t = (a/t + t) / 2.0;
 		   }
+		 
 		  System.out.println(t);
+		  
+		  
+		
 		  	
 		
 		fibonacci(10);
@@ -123,6 +143,7 @@ public class LogicalProblem {
 		checkPrime(4);
 		reverseNumber(125);
 		couponGenerator();
+		toBinary(15);
 		
 	}
 
