@@ -3,12 +3,10 @@ import java.util.Scanner;
 
 public class ToBinary {
 	
-	static void binaryCalc() {
-		int n, count = 0, a;
+	static void binaryCalc(int n) {
+		int count = 0, a;
         String x = "";
-        Scanner S = new Scanner(System.in);
-        System.out.print("Enter any decimal number:");
-        n = S.nextInt();
+      
         while(n > 0)
         {
             a = n % 2;
@@ -25,7 +23,11 @@ public class ToBinary {
 
 	    public static void main(String[] args) 
 	    {
-	       binaryCalc(); 
+	    	Scanner s = new Scanner(System.in);
+	        System.out.print("Enter any decimal number:");
+	        int n = s.nextInt();
+	       binaryCalc(n); 
+	       s.close();
 	    }  
 	}
 
