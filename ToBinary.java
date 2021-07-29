@@ -1,33 +1,37 @@
 package logicalProblemsJava;
+
 import java.util.Scanner;
+
 
 public class ToBinary {
 	
-	static void binaryCalc(int n) {
-		int count = 0, a;
+	public static String binaryCalc(int n) {
+		int a;
         String x = "";
+        String binary="";
       
         while(n > 0)
         {
             a = n % 2;
-            if(a == 1)
-            {
-                count++;
-            }
             x = a + "" + x;
             n = n / 2;
         }
-        System.out.println("Binary number:"+x);
-        System.out.println("No. of 1s:"+count);
+        for(int i=0;i<8-x.length();i++){
+        	binary+="0";
+        }
+        binary+=x;
+        System.out.println(x);
+        return binary;
+       
 	}
 
-	    public static void main(String[] args) 
-	    {
-	    	Scanner s = new Scanner(System.in);
-	        System.out.print("Enter any decimal number:");
-	        int n = s.nextInt();
-	       binaryCalc(n); 
-	       s.close();
-	    }  
-	}
 
+	 public static void main(String[] args) {
+		 
+		System.out.println("Enter a number");	
+		Scanner input = new Scanner(System.in);
+		int s=input.nextInt();
+		 
+		 binaryCalc(s);
+	 }
+}
