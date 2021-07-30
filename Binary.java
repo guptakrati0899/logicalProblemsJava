@@ -21,7 +21,6 @@ public class Binary {
 		int decimal=Integer.parseInt(binary,2);  
 		return decimal;
 	}
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc=new Scanner(System.in);
